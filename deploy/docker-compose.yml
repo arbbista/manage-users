@@ -36,8 +36,8 @@ services:
         - 5672:5672
         - 15672:15672
     volumes:
-        - .docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-        - .docker-conf/rabbitmq/log/:/var/log/rabbitmq
+        - rb-data/:/var/lib/rabbitmq/
+        - rb-log/:/var/log/rabbitmq
     restart: always
 
   manageusers:
@@ -53,6 +53,10 @@ volumes:
   postgres:
     external: true
   postgres-data:
+    external: true
+  rb-data:
+    external: true
+  rb-log:
     external: true
 
 networks:
