@@ -15,7 +15,7 @@ To create an `executable jar`  of the project also to build `image on docker`, s
 ```
 
 ### Step 2: Building docker network and volumes
-To create the network on docker, needed volumes for services and to initialize the creation of all needed services for the project, simply run the command:
+To create the `network on docker`, `needed volumes` for services and `run all needed services` for the project on docker, simply run the command:
 
 ```sh
 ./deploy/build-image.sh
