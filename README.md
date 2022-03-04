@@ -77,8 +77,3 @@ Password: 123456
 ```
 http://localhost:8080/docs
 ```
-
-## Summary
-
-
-
