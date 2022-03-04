@@ -3,6 +3,8 @@
 # Created by Arbër Pllana on 03/03/2022.
 #
 
+cd "$(dirname "$0")"
+
 cd ../UsersManager
 
 ./gradlew clean build -x test
