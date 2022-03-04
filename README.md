@@ -8,25 +8,17 @@ This is a simple Java project made  spring boot framework and uses postgreSQL an
 - docker CLI
 
 ### Step 1: Building Executable JAR and docker image
-To create an `executable jar`  of the project also to build `image on docker`, simply run the shell script that is located in:
+To create an `executable jar`  of the project also to build `image on docker`, simply run the command:
 
 ```sh
-manage-users/deploy/init-setup.sh
+./deploy/init-setup.sh
 ```
 
 ### Step 2: Building docker network and volumes
-To create the network on docker and needed volumes for services, simply run the shell script that is located in:
+To create the network on docker, needed volumes for services and to initialize the creation of all needed services for the project, simply run the command:
 
 ```sh
-manage-users/deploy/build-image.sh
-```
-
-### Step 3: Building & running application
-
-To initialize the creation of all needed services for the project, you must go to the path `/manage-users/deploy` and run the following command:
-
-```sh
-docker-compose up -d
+./deploy/build-image.sh
 ```
 
 ## Application & Routing
