@@ -7,6 +7,8 @@ docker network create ucx
 docker volume create --name=postgres
 docker volume create --name=postgres-data
 
-# chmod 777 .docker-conf
+mkdir /.docker-conf/rabbitmq/data/
+mkdir /.docker-conf/rabbitmq/log/
+sudo chmod 666 .docker-conf
 
 docker-compose up -d
