@@ -1,0 +1,61 @@
+# 
+# Copyright (C) 2022. Smart Bits GmbH. All rights reserved.
+# Created by Arbër Pllana on 03/03/2022.
+#
+
+version: "2.3"
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres
+    ports:
+      - "5444:5432"
+    volumes:
+      - postgres:/var/lib/postgresql
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    ports:
+      - "8854:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: arbbista@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: rnEO0tOCjiMy2h34
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - .docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - .docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    restart: always
+
+  manageusers:
+    image: manageusers:latest
+    container_name: manageusers
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: test
+    restart: always
+
+volumes:
+  postgres:
+    external: true
+  postgres-data:
+    external: true
+
+networks:
+  default:
+    external:
+      name: ucx
