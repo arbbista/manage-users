@@ -11,14 +11,14 @@ This is a simple Java project made  spring boot framework and uses postgreSQL an
 To create an `executable jar`  of the project also to build `image on docker`, simply run the command:
 
 ```sh
-./deploy/init-setup.sh
+./deploy/build-image.sh
 ```
 
 ### Step 2: Building docker network and volumes
-To create the `network on docker`, `needed volumes` for services and `run all needed services` for the project on docker, simply run the command:
+To create the `network on docker`, `needed volumes` for services and to `install & run all services` on docker, simply run the command:
 
 ```sh
-./deploy/build-image.sh
+./deploy/init-setup.sh
 ```
 
 ## Application & Routing
