@@ -5,7 +5,9 @@ This is a simple Java project made  spring boot framework and uses postgreSQL an
 ## Building application
 
 ### Pre-requisites
-- docker CLI
+- Docker CLI
+- Java JDK 11+
+- Gradle v6.0+
 
 ### Step 1: Building Executable JAR and docker image
 To create an `executable jar`  of the project also to build `image on docker`, simply run the command:
