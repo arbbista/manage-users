@@ -14,8 +14,8 @@ To create an `executable jar`  of the project also to build `image on docker`, s
 ./deploy/build-image.sh
 ```
 
-### Step 2: Building docker network and volumes
-To create the `network on docker`, `needed volumes` for services and to `install & run all services` on docker, simply run the command:
+### Step 2: Building docker & Run
+Creates the `network`, needed `volumes` for services and to `install & run all services` on docker. After this script is finished, the services starts running and are ready to use.
 
 ```sh
 ./deploy/init-setup.sh
@@ -23,7 +23,7 @@ To create the `network on docker`, `needed volumes` for services and to `install
 
 ## Application & Routing
 
-Now, that we built the images and services are running on our machine, we can explore how services are behaving.
+Now, that we built the images and services are running in our machine, we can explore how services are behaving.
 
 #### Spring boot service url
 
@@ -37,7 +37,7 @@ http://localhost:8080
 http://localhost:15672
 ```
 
-Use the following credentials for login:
+Use the following credentials to login:
 
 ```
 Username: guest
@@ -50,14 +50,20 @@ Password: guest
 http://localhost:8854
 ```
 
-Use the following credentials for login:
+Use the following credentials to login:
 
 ```
 Username: arbbista@gmail.com
 Password: rnEO0tOCjiMy2h34
 ```
 
-#### PostgreSQL credentials
+#### PostgreSQL server url
+
+```
+http://localhost:5444
+```
+
+Use the following credentials to login:
 
 ```
 Username: postgres
