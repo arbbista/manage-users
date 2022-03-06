@@ -6,6 +6,7 @@
 cd "$(dirname "$0")"
 
 docker network create ucx
+
 docker volume create --name=postgres
 docker volume create --name=postgres-data
 
